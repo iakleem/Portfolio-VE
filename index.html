@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akleem — Video Editor</title>
+  <link rel="icon" href="assets/photo%20of%20mine.jpeg">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+  <!-- ── CUSTOM CURSOR (creatoroly style) ── -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-badge" id="cursorBadge">
+      <span class="cb-ico" id="cbIco">
+        <svg class="cb-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg class="cb-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M8 5.5v13a1 1 0 0 0 1.54.84l10-6.5a1 1 0 0 0 0-1.68l-10-6.5A1 1 0 0 0 8 5.5z"/></svg>
+      </span>
+      <span class="cb-label" id="cbLabel">SHOWREEL</span>
+    </div>
+  </div>
+
+  <!-- ── FLOATING PILL NAV ── -->
+  <nav class="pill-nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-avatar-link">
+        <img src="assets/photo%20of%20mine.jpeg" class="nav-avatar" alt="Akleem">
+      </a>
+      <div class="nav-links">
+        <a href="#work" class="nav-link"><span>Projects</span></a>
+        <a href="#varieties" class="nav-link"><span>Styles</span></a>
+        <a href="#contact" class="nav-link" data-open-contact><span>Get in Touch</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO — handle + tagline + showreel card
+       ══════════════════════════════════════ -->
+  <header class="hero" id="top">
+
+    <div class="hero-head">
+      <h1 class="hero-handle">@aklleem</h1>
+      <p class="hero-tagline">edits that feel clean</p>
+
+      <div class="hero-actions">
+        <a href="#statement" class="hero-info-btn" title="About">i</a>
+        <a href="#work" class="hero-cta">
+          <span>Browse projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card" id="heroCard" data-cursor="showreel">
+      <video
+        class="hero-video"
+        id="heroVideo"
+        src="assets/intro%20video.mp4"
+        muted
+        loop
+        playsinline
+        autoplay
+        preload="auto"></video>
+
+      <button class="hv-btn hv-playpause" id="heroPlayBtn" title="Play / pause">
+        <svg class="ico ico-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg class="ico ico-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M8 5.5v13a1 1 0 0 0 1.54.84l10-6.5a1 1 0 0 0 0-1.68l-10-6.5A1 1 0 0 0 8 5.5z"/></svg>
+      </button>
+
+      <button class="hv-btn hv-mute" id="heroMuteBtn" title="Mute / unmute">
+        <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/>
+          <line x1="23" y1="9" x2="17" y2="15"/>
+          <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+        <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- ══════════════════════════════════════
+       FEATURED WORK — folder varieties
+       ══════════════════════════════════════ -->
+  <main class="work" id="work">
+
+    <div class="work-head">
+      <h2 class="work-title">Featured Work</h2>
+    </div>
+
+    <!-- ── TALKING HEAD ── -->
+    <section class="variety" id="talking-head">
+      <div class="bracket-head">
+        <span class="bk bk-tl"></span><span class="bk bk-tr"></span>
+        <h3 class="variety-title">Talking Head</h3>
+        <p class="variety-sub">TALKING-HEAD EDITS — FACE ON CAMERA</p>
+        <span class="bk bk-bl"></span><span class="bk bk-br"></span>
+      </div>
+
+      <div class="bg-words" aria-hidden="true"><span>TALKING</span><span>HEAD</span></div>
+
+      <div class="cards-row">
+        <div class="vcard" data-label="Hook First">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%201.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">01</span><span class="vcard-label">Hook First</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Retention Cut">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%202.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">02</span><span class="vcard-label">Retention Cut</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Story Rhythm">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%203.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">03</span><span class="vcard-label">Story Rhythm</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Punchy Flow">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%204.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">04</span><span class="vcard-label">Punchy Flow</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Clean Delivery">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%205.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">05</span><span class="vcard-label">Clean Delivery</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Fast Pace">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%206.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">06</span><span class="vcard-label">Fast Pace</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Bold Framing">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head%207.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">07</span><span class="vcard-label">Bold Framing</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Direct Address">
+          <div class="vcard-media">
+            <video src="assets/Talking%20Head/talking%20head6.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">08</span><span class="vcard-label">Direct Address</span><span class="vcard-tag">9:16</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FACELESS MOTION ── -->
+    <section class="variety" id="faceless">
+      <div class="bracket-head">
+        <span class="bk bk-tl"></span><span class="bk bk-tr"></span>
+        <h3 class="variety-title">Faceless Motion</h3>
+        <p class="variety-sub">FACELESS &amp; MOTION GRAPHICS</p>
+        <span class="bk bk-bl"></span><span class="bk bk-br"></span>
+      </div>
+
+      <div class="bg-words" aria-hidden="true"><span>FACELESS</span><span>MOTION</span></div>
+
+      <div class="cards-row">
+        <div class="vcard" data-label="Motion Intro">
+          <div class="vcard-media">
+            <video src="assets/Faceless%20Motion%20graphics/Faceless%201.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">09</span><span class="vcard-label">Motion Intro</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Kinetic Type">
+          <div class="vcard-media">
+            <video src="assets/Faceless%20Motion%20graphics/Faceless%202.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">10</span><span class="vcard-label">Kinetic Type</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Visual Story">
+          <div class="vcard-media">
+            <video src="assets/Faceless%20Motion%20graphics/faceless%204.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">11</span><span class="vcard-label">Visual Story</span><span class="vcard-tag">9:16</span></div>
+        </div>
+
+        <div class="vcard" data-label="Brand Loop">
+          <div class="vcard-media">
+            <video src="assets/Faceless%20Motion%20graphics/facless%205.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">12</span><span class="vcard-label">Brand Loop</span><span class="vcard-tag">9:16</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SAAS ADS ── -->
+    <section class="variety" id="saas">
+      <div class="bracket-head">
+        <span class="bk bk-tl"></span><span class="bk bk-tr"></span>
+        <h3 class="variety-title">SaaS Ads</h3>
+        <p class="variety-sub">PRODUCT &amp; SAAS PROMOS</p>
+        <span class="bk bk-bl"></span><span class="bk bk-br"></span>
+      </div>
+
+      <div class="bg-words" aria-hidden="true"><span>SAAS</span><span>PRODUCT</span></div>
+
+      <div class="cards-row">
+        <div class="vcard vcard--45" data-label="Product Story">
+          <div class="vcard-media">
+            <video src="assets/SaaS/saas%201.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">13</span><span class="vcard-label">Product Story</span><span class="vcard-tag">4:5</span></div>
+        </div>
+
+        <div class="vcard vcard--169" data-label="Feature Flow">
+          <div class="vcard-media">
+            <video src="assets/SaaS/saas%202.mp4" muted loop playsinline preload="metadata"></video>
+            <button class="vcard-mute-btn" title="Mute / unmute">
+              <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+          <div class="vcard-info"><span class="vcard-num">14</span><span class="vcard-label">Feature Flow</span><span class="vcard-tag">16:9</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LONG FORM / VSL ── -->
+    <section class="variety" id="vsl">
+      <div class="bracket-head">
+        <span class="bk bk-tl"></span><span class="bk bk-tr"></span>
+        <h3 class="variety-title">Long Form</h3>
+        <p class="variety-sub">VSL — VIDEO SALES LETTER</p>
+        <span class="bk bk-bl"></span><span class="bk bk-br"></span>
+      </div>
+
+      <div class="bg-words" aria-hidden="true"><span>LONG</span><span>FORM</span></div>
+
+      <div class="vsl-card" data-cursor="showreel" data-badge="VSL">
+        <video
+          class="vsl-video"
+          id="vslVideo"
+          src="assets/long%20video%20compressed.mp4"
+          muted
+          loop
+          playsinline
+          preload="metadata"></video>
+
+        <button class="hv-btn hv-playpause" id="vslPlayBtn" title="Play / pause">
+          <svg class="ico ico-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          <svg class="ico ico-play" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M8 5.5v13a1 1 0 0 0 1.54.84l10-6.5a1 1 0 0 0 0-1.68l-10-6.5A1 1 0 0 0 8 5.5z"/></svg>
+        </button>
+
+        <button class="hv-btn hv-mute" id="vslMuteBtn" title="Mute / unmute">
+          <svg class="ico ico-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+          </svg>
+          <svg class="ico ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" stroke="none"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="vcard-info">
+        <span class="vcard-num">15</span>
+        <span class="vcard-label">Long-Form VSL</span>
+        <span class="vcard-tag">16:9</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       STATEMENT — tick ring + word reveal
+       ══════════════════════════════════════ -->
+  <section class="statement" id="statement">
+    <div class="tick-ring-wrap" id="tickRingWrap">
+      <svg id="tickSvg" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <p class="hero-text" id="heroText">
+      <span class="w">Clean</span>
+      <span class="w">is</span>
+      <span class="w">not</span>
+      <span class="w">a</span>
+      <span class="w">style.</span>
+      <span class="w">It</span>
+      <span class="w">is</span>
+      <span class="w">a</span>
+      <span class="w">discipline.</span>
+      <span class="w w-bold">@aklleem</span>
+      <span class="w">edits</span>
+      <span class="w">every</span>
+      <span class="w">frame</span>
+      <span class="w">until</span>
+      <span class="w">it</span>
+      <span class="w">feels</span>
+      <span class="w">effortless.</span>
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       VARIETIES — giant stacked index
+       ══════════════════════════════════════ -->
+  <section class="varieties" id="varieties">
+    <div class="bracket-head">
+      <span class="bk bk-tl"></span><span class="bk bk-tr"></span>
+      <h2 class="varieties-title" id="varietiesTitle">Edit Varieties</h2>
+      <p class="variety-sub">WHAT I WORK ON — SELECTED STYLES</p>
+      <span class="bk bk-bl"></span><span class="bk bk-br"></span>
+    </div>
+
+    <div class="variety-list">
+      <a href="#talking-head" class="vrow" data-cursor="view">
+        <span class="vrow-name">TALKING HEAD</span>
+        <span class="vrow-count">08 EDITS</span>
+      </a>
+      <a href="#faceless" class="vrow" data-cursor="view">
+        <span class="vrow-name">FACELESS</span>
+        <span class="vrow-count">04 EDITS</span>
+      </a>
+      <a href="#saas" class="vrow" data-cursor="view">
+        <span class="vrow-name">SAAS ADS</span>
+        <span class="vrow-count">02 EDITS</span>
+      </a>
+      <a href="#vsl" class="vrow" data-cursor="view">
+        <span class="vrow-name">LONG FORM</span>
+        <span class="vrow-count">01 EDIT</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT / FOOTER
+       ══════════════════════════════════════ -->
+  <footer class="contact" id="contact">
+    <p class="contact-line">Clean frames, sharp cuts, zero wasted seconds.</p>
+
+    <div class="contact-grid">
+      <div class="contact-col">
+        <p class="contact-label">Contact</p>
+        <a href="https://api.whatsapp.com/send?phone=9356747881" target="_blank" rel="noopener" class="contact-link">WhatsApp <span class="bracket">[↗]</span></a>
+      </div>
+      <div class="contact-col">
+        <p class="contact-label">Sections</p>
+        <a href="#top" class="contact-link">Home <span class="bracket">[ ]</span></a>
+        <a href="#work" class="contact-link">Projects <span class="bracket">[ ]</span></a>
+        <a href="#varieties" class="contact-link">Styles <span class="bracket">[ ]</span></a>
+        <a href="#contact" class="contact-link" data-open-contact>Get in Touch <span class="bracket">[ ]</span></a>
+      </div>
+      <div class="contact-col">
+        <p class="contact-label">Socials</p>
+        <a href="https://www.instagram.com/aklleem/" target="_blank" rel="noopener" class="contact-link">Instagram <span class="bracket">[↗]</span></a>
+      </div>
+    </div>
+
+    <div class="watermark" aria-hidden="true">akleem.</div>
+
+    <div class="footer-bar">
+      <span>© 2026 Akleem Khan</span>
+      <span>Video Editor</span>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       GET IN TOUCH — modal (creatoroly style)
+       ══════════════════════════════════════ -->
+  <div class="modal" id="contactModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-contact></div>
+
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Get in touch">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close" data-close-contact>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <h2 class="modal-title">Say hello.</h2>
+
+      <div class="modal-grid">
+        <form class="modal-form" id="contactForm" novalidate>
+          <label class="mf-field">
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="Enter your name" autocomplete="name" required>
+          </label>
+          <label class="mf-field">
+            <span>Your Email</span>
+            <input type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+          </label>
+          <label class="mf-field">
+            <span>Your contact info — WhatsApp / Telegram</span>
+            <input type="text" name="contact" placeholder="Provide contact info" autocomplete="tel">
+          </label>
+          <label class="mf-field">
+            <span>Company / Domain</span>
+            <input type="text" name="company" placeholder="Enter your domain" autocomplete="organization">
+          </label>
+          <label class="mf-field">
+            <span>Budget</span>
+            <select name="budget">
+              <option value="" selected>Select a range</option>
+              <option>Under $250</option>
+              <option>$250 – $500</option>
+              <option>$500 – $1,500</option>
+              <option>$1,500 – $5,000</option>
+              <option>$5,000+</option>
+              <option>Monthly retainer</option>
+            </select>
+          </label>
+          <label class="mf-check">
+            <input type="checkbox" name="rush">
+            <span>Rush delivery <em>(under 10 days)</em></span>
+          </label>
+          <button type="submit" class="mf-submit" id="formSubmitBtn">Submit</button>
+          <p class="mf-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="modal-card">
+          <div class="mc-top"><span class="mc-brand">akleem.</span><span class="mc-code">Video Editor</span></div>
+          <div class="mc-bracket" aria-hidden="true"><span>[</span><span class="mc-dash"></span><span>]</span></div>
+          <ul class="mc-list">
+            <li>Short-Form Edits — Reels · Shorts · TikTok</li>
+            <li>Talking-Head Editing</li>
+            <li>Faceless Motion Graphics</li>
+            <li>SaaS &amp; Product Ads</li>
+            <li>Hook &amp; Retention Pass</li>
+            <li>Captions &amp; Subtitles</li>
+            <li>Sound Design &amp; SFX</li>
+            <li>Color &amp; Final Polish</li>
+          </ul>
+          <div class="mc-bottom"><span>2026 · AB-0142</span><span>Standard</span></div>
+        </aside>
+      </div>
+
+      <div class="retainer">
+        <div class="retainer-copy">
+          <h3>Enterprise Project</h3>
+          <p>Need ongoing editing support? For creators and teams shipping multiple launches, features, and campaigns.</p>
+          <ul>
+            <li>Dedicated Editor</li>
+            <li>Priority Turnaround</li>
+            <li>Consistent Visual Direction</li>
+            <li>Flexible Monthly Output</li>
+          </ul>
+        </div>
+        <a class="retainer-btn" href="https://api.whatsapp.com/send?phone=9356747881" target="_blank" rel="noopener">
+          Discuss a Retainer
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <div class="modal-rows">
+        <a class="mrow" href="mailto:gamerrdlegnd@gmail.com">
+          <span class="mrow-label">E-Mail</span>
+          <span class="mrow-value">gamerrdlegnd@gmail.com</span>
+        </a>
+        <a class="mrow" href="https://api.whatsapp.com/send?phone=9356747881" target="_blank" rel="noopener">
+          <span class="mrow-label">WhatsApp</span>
+          <span class="mrow-value">+91 93567 47881 ↗</span>
+        </a>
+        <a class="mrow" href="https://www.instagram.com/aklleem/" target="_blank" rel="noopener">
+          <span class="mrow-label">Instagram</span>
+          <span class="mrow-value">instagram.com/aklleem ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>
