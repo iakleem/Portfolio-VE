@@ -1,0 +1,10 @@
+# Video assets rarely change — let returning visitors skip re-downloading them
+[[headers]]
+  for = "/assets/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

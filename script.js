@@ -143,6 +143,7 @@
     const s = v.getAttribute("src");
     if (!s) return;
     v.dataset.src = s;
+    v.preload = "none";
     v.removeAttribute("src");
     v.load();
   });
@@ -154,7 +155,7 @@
       lazyObs.unobserve(v);
       if (v.dataset.src && !v.getAttribute("src")) v.src = v.dataset.src;
     });
-  }, { rootMargin: "700px 0px" });
+  }, { rootMargin: "200px 0px" });
 
   allVideos.forEach((v) => { if (v.dataset.src) lazyObs.observe(v); });
 
@@ -267,8 +268,7 @@
         vslWantedOn = e.isIntersecting;
         if (vslWantedOn) {
           vslVideo.play().catch(() => {
-            // First scroll-in can race the lazy src assignment (huge file
-            // starts loading) — retry once it settles
+            // First scroll-in can race the lazy src assignment — retry once
             setTimeout(() => {
               if (vslWantedOn && vslVideo.paused) vslVideo.play().catch(() => {});
             }, 700);
